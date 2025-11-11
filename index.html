@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harvir Singh — Product-Focused Project Manager & FinTech Builder</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HarvirSingh Portfolio — Product-Focused PM & FinTech Builder</title>
+  <meta name="description" content="Portfolio of Harvir Singh — Product-Focused Project Manager & FinTech Builder." />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" />
 </head>
 <body>
+  <!-- ===== Top Nav ===== -->
+  <header class="nav">
+    <div class="nav__left">
+      <div class="logo">Harvir<span>Singh</span> <em>Portfolio</em></div>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="nav__right">
+      <a class="btn btn--resume" href="assets/resume/Harvir_Singh_Resume.pdf" download>⬇ Download Résumé</a>
+    </div>
+  </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero">
-    <h1>Harvir Singh</h1>
-    <h2>Product-Focused Project Manager & FinTech Builder</h2>
-    <p>Driving business impact through data, strategy, and execution excellence.</p>
-    <a href="#contact" class="btn-primary">Get in Touch</a>
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero" style="--bg:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop')">
+    <div class="hero__overlay"></div>
+    <div class="hero__content fade-in">
+      <h1 class="hero__title">Harvir Singh</h1>
+      <p class="hero__subtitle">Product-Focused Project Manager &amp; FinTech Builder</p>
+      <p class="hero__tagline">I ship data-driven products that grow adoption, reduce risk, and move business metrics.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a results-driven Project Manager with 6+ years of experience leading SaaS, ERP, and FinTech projects.
-      Skilled in Agile delivery, stakeholder alignment, and data-driven product growth.
-    </p>
-  </section>
+  <!-- ===== Projects (Rows auto-rendered by JS) ===== -->
+  <main id="projects" class="rows" aria-live="polite"></main>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <ul>
-      <li><strong>BizLens</strong> — Unified KPI & Forecasting Platform (Python, SQL, Power BI)</li>
-      <li><strong>AutoTrader Live</strong> — Real-time Trading Analytics Stack (Python, TimescaleDB)</li>
-      <li><strong>AML360</strong> — RegTech Risk Monitoring Dashboard (Streamlit, Grafana)</li>
-    </ul>
-  </section>
-
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="xp">
     <h2>Experience</h2>
-    <p><strong>Project Manager – Arisoft Global (Canada)</strong><br>Feb 2023 – May 2025</p>
-    <p>Led SaaS implementations improving client adoption by 98% in the first quarter. Owned roadmap and delivery across cross-functional teams.</p>
-    <p><strong>Product Operations – Embibe (Reliance Jio)</strong><br>2018 – 2022</p>
-    <p>Drove data-driven product localization for millions of users. Partnered with design and AI teams to enhance content delivery efficiency.</p>
+    <div class="xp__grid">
+      <article class="xp__item">
+        <h3>Project Manager — Arisoft Global (Canada)</h3>
+        <p class="xp__meta">Feb 2023 – May 2025 • ERP/MES &amp; SaaS Implementations</p>
+        <ul>
+          <li>Drove go-lives improving client adoption by <strong>98%</strong> in Q1; owned roadmap & cross-functional delivery.</li>
+          <li>Instituted KPIs, risk registers, and sprint cadences to reduce cycle time by <strong>30%</strong>.</li>
+        </ul>
+      </article>
+      <article class="xp__item">
+        <h3>Product Operations — Embibe (Reliance Jio)</h3>
+        <p class="xp__meta">2018 – 2022 • EdTech / AI Content Localization</p>
+        <ul>
+          <li>Scaled localized content to millions; improved delivery throughput with data-driven pipelines.</li>
+          <li>Partnered with Design/AI to optimize user journeys and content relevance.</li>
+        </ul>
+      </article>
+    </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact">
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>📧 <a href="mailto:contact@harvirsingh.com">contact@harvirsingh.com</a></p>
-    <p>🌐 <a href="https://www.linkedin.com/in/harvirsingh" target="_blank">LinkedIn</a> |
-       <a href="https://github.com/Harvir-Singh" target="_blank">GitHub</a></p>
+    <p>📧 <a href="mailto:harvir@harvirsingh.com">harvir@harvirsingh.com</a></p>
+    <p>🌐 <a href="https://www.linkedin.com/in/harvirsingh" target="_blank" rel="noopener">LinkedIn</a> ·
+       <a href="https://github.com/Harvir-Singh" target="_blank" rel="noopener">GitHub</a></p>
   </section>
 
-  <footer>
-    <p>© 2025 Harvir Singh. All Rights Reserved.</p>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div>© 2025 Harvir Singh — Portfolio</div>
+    <div class="footer__links">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ===== Modal (More Info) ===== -->
+  <div class="modal" id="infoModal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <h3 id="modalTitle" class="modal__title">Project</h3>
+      <p class="modal__desc"></p>
+      <div class="modal__meta"></div>
+      <div class="modal__actions">
+        <a class="btn btn--primary" id="modalDemo" target="_blank" rel="noopener">Live Demo</a>
+        <a class="btn btn--ghost" id="modalCode" target="_blank" rel="noopener">View Code</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
