@@ -115,10 +115,24 @@ body{
 .xp__meta{ color:#9ab; margin:.2rem 0 1rem; font-size:14px }
 
 /* ===== Contact ===== */
-.contact{ padding:80px 24px; max-width:900px; margin:0 auto }
-.contact h2{ margin:0 0 12px; border-bottom:2px solid #263544; display:inline-block; padding-bottom:6px }
-.contact a{ color:#9cc3ff; text-decoration:none }
-.contact a:hover{ text-decoration:underline }
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-icons img {
+  width: 32px;
+  height: 32px;
+  filter: invert(0.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.15);
+  filter: invert(0);
+}
 
 /* ===== Footer ===== */
 .footer{ padding:28px 64px; color:#a5a5a5; background:var(--bg-soft); display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between }
