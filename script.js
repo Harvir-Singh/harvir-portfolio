@@ -16,7 +16,31 @@ const PROJECT_ROWS = [
         demo: "#"
       },
       {
-        name: "PayPilot — Payouts + Compliance",
+        name: "Fraud Detection System",
+        img: "https://picsum.photos/600/900?random=32",
+        tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
+        desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
+        code: "https://github.com/Harvir-Singh",
+        demo: "#"
+      },
+      {
+        name: "Fraud Threshold Optimizer",
+        img: "https://picsum.photos/600/900?random=32",
+        tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
+        desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
+        code: "https://github.com/Harvir-Singh",
+        demo: "#"
+      },
+      {
+        name: "Fraud Analytics Dashboard",
+        img: "https://picsum.photos/600/900?random=32",
+        tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
+        desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
+        code: "https://github.com/Harvir-Singh",
+        demo: "#"
+      },
+      {
+        name: "Fraud Risk Strategy",
         img: "https://picsum.photos/600/900?random=32",
         tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
