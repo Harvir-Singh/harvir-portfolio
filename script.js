@@ -25,24 +25,24 @@ const PROJECT_ROWS = [
       },
       {
         name: "Fraud Threshold Optimizer",
-        img: "https://picsum.photos/600/900?random=32",
-        tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
+        img: "https://picsum.photos/600/900?random=33",
+        tags: ["Python", "SQL", "Postgres", "Scikit-learn", "Optimization"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
         demo: "#"
       },
       {
         name: "Fraud Analytics Dashboard",
-        img: "https://picsum.photos/600/900?random=32",
-        tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
+        img: "https://picsum.photos/600/900?random=34",
+        tags: ["Jupyter Notebook", "Python", "Postgres", "Seaborn", "Matplotlib"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
         demo: "#"
       },
       {
         name: "Fraud Risk Strategy",
-        img: "https://picsum.photos/600/900?random=32",
-        tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
+        img: "https://picsum.photos/600/900?random=35",
+        tags: ["Jupyter Notebook", "Pandas", "Scikit-learn", "Risk Modeling"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
         demo: "#"
