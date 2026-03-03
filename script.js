@@ -9,7 +9,7 @@ const PROJECT_ROWS = [
     items: [
       {
         name: "AML360 — Real-Time AML Dashboard",
-        img: "https://picsum.photos/600/900?random=31",
+        img: "assets/images/fintech/aml360.png",
         tags: ["Streamlit", "Grafana", "Prometheus", "Great Expectations"],
         desc: "Real-time transaction risk scoring, case triage, SAR draft exports, metric SLOs.",
         code: "https://github.com/Harvir-Singh",    // replace with repo
