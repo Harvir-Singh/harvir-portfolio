@@ -17,7 +17,7 @@ const PROJECT_ROWS = [
       },
       {
         name: "Fraud Detection System",
-        img: "https://picsum.photos/600/900?random=32",
+        img: "assets\\images\\fintech\\fraud-detection system.png",
         tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
@@ -25,7 +25,7 @@ const PROJECT_ROWS = [
       },
       {
         name: "Fraud Threshold Optimizer",
-        img: "https://picsum.photos/600/900?random=33",
+        img: "assets\\images\\fintech\\threshold-optimizer.png",
         tags: ["Python", "SQL", "Postgres", "Scikit-learn", "Optimization"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
@@ -33,7 +33,7 @@ const PROJECT_ROWS = [
       },
       {
         name: "Fraud Analytics Dashboard",
-        img: "https://picsum.photos/600/900?random=34",
+        img: "assets\\images\\fintech\\fraud-analytics.png",
         tags: ["Jupyter Notebook", "Python", "Postgres", "Seaborn", "Matplotlib"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
@@ -41,7 +41,7 @@ const PROJECT_ROWS = [
       },
       {
         name: "Fraud Risk Strategy",
-        img: "https://picsum.photos/600/900?random=35",
+        img: "assets\\images\\fintech\\fraud-strategy.png",
         tags: ["Jupyter Notebook", "Pandas", "Scikit-learn", "Risk Modeling"],
         desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.",
         code: "https://github.com/Harvir-Singh",
