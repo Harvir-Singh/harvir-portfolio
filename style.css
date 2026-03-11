@@ -126,6 +126,23 @@ body{
 .xp__item{ background:white; border:1px solid #eee; border-radius:12px; padding:20px }
 .xp__meta{ color:#9ab; margin:.2rem 0 1rem; font-size:14px }
 
+
+/* ===== Education ===== */
+.education__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+  max-width:800px;
+  margin:auto;
+}
+.education__item{
+  background:#111;
+  border:1px solid #252525;
+  border-radius:12px;
+  padding:20px;
+}
+
+
 /* ===== Contact ===== */
 .contact-icons {
   display: flex;
