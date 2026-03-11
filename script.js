@@ -49,56 +49,6 @@ const PROJECT_ROWS = [
       }
     ]
   },
-  {
-    title: "Data Analytics & Forecasting",
-    id: "row2",
-    items: [
-      {
-        name: "BizLens — KPI & Forecasting Platform",
-        img: "https://picsum.photos/600/900?random=21",
-        tags: ["Python", "SQL", "Power BI", "ARIMA/Prophet"],
-        desc: "Star schema, ETL, forecasting, cohort LTV, DAX dashboards.",
-        code: "https://github.com/Harvir-Singh",
-        demo: "#"
-      },
-      {
-        name: "Portfolio Tracker — Single User",
-        img: "https://picsum.photos/600/900?random=22",
-        tags: ["Postgres", "Python", "yfinance", "Streamlit"],
-        desc: "Daily P&L, performance metrics, asset allocation, risk exposure.",
-        code: "https://github.com/Harvir-Singh",
-        demo: "#"
-      }
-    ]
-  },
-  {
-    title: "Markets & Automation",
-    id: "row3",
-    items: [
-      {
-        name: "AutoTrader Live — Manual Execution",
-        img: "https://picsum.photos/600/900?random=11",
-        tags: ["Finnhub", "TimescaleDB", "Alerts"],
-        desc: "Real-time market data, alerts, manual order workflow, risk controls.",
-        code: "https://github.com/Harvir-Singh",
-        demo: "#"
-      }
-    ]
-  },
-  {
-    title: "Product & Ops",
-    id: "row4",
-    items: [
-      {
-        name: "Product IQ — PM Toolkit",
-        img: "https://picsum.photos/600/900?random=41",
-        tags: ["Jira", "Confluence", "OKRs", "A/B"],
-        desc: "Templates for PRDs, OKRs, discovery, roadmap, analytics experiments.",
-        code: "https://github.com/Harvir-Singh",
-        demo: "#"
-      }
-    ]
-  }
 ];
 
 /* =========
