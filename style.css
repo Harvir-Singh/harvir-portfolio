@@ -45,14 +45,30 @@ body{
   background-size:cover; background-position:center; background-repeat:no-repeat;
   background-image: var(--bg);
 }
-.hero{
-  background:linear-gradient(
-  135deg,
-  #ff8c5a,
-  #ff5f6d,
-  #7b61ff
-  );
+
+body{
+  background:#f5f5f5;
 }
+
+.hero{
+  position:relative;
+  min-height:70vh;
+  margin:20px;
+  border-radius:20px;
+
+  display:flex;
+  align-items:center;
+
+  background:linear-gradient(
+    135deg,
+    #ff8c5a,
+    #ff5f6d,
+    #7b61ff
+  );
+
+  overflow:hidden;
+}
+
 .hero{ background-image: var(--bg) }
 .hero{ background-image: var(--bg) } /* prevents CLS */
 .hero{ background-image: var(--bg) }
@@ -60,16 +76,15 @@ body{
 .hero{ background-image: var(--bg) } /* final assignment via inline css var */
 
 .hero__overlay{
-  position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,.95) 100%),
-              linear-gradient(90deg, rgba(0,0,0,.55) 0%, transparent 55%);
+  display:none;
 }
+
 .hero__content{
   position:relative; padding:8vw 4vw; max-width:900px;
 }
-.hero__title{ font-size: clamp(32px, 6vw, 56px); margin:0 0 8px; font-weight:900 }
-.hero__subtitle{ margin:0 0 6px; color:#e8eef6; font-weight:700 }
-.hero__tagline{ color:#cdd6df; max-width:60ch; margin:0 0 16px }
+.hero__title{ font-size:72px; font-weight:600 }
+.hero__subtitle{ margin:0 0 6px; color:#e8eef6; font-weight:700; font: size 22px }
+.hero__tagline{ color:#cdd6df; max-width:60ch; margin:0 0 16px; font-size:18px }
 .hero__actions{ display:flex; gap:12px }
 .btn--primary{ background:#fff; color:#111 }
 .btn--ghost{ background:var(--accent-ghost); color:#fff; border:1px solid rgba(255,255,255,.2) }
