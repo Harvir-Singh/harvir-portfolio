@@ -63,35 +63,42 @@ Render rows & cards
 
 const rowsRoot = document.getElementById("projects"); 
 
-function createCard(item){ 
-  const a = document.createElement("a");
-   a.className = "card"; 
-   a.href = "javascript:void(0)"; 
-   a.setAttribute("role", "button"); 
-   a.addEventListener("click", () => openModal(item)); 
-   
-   const img = document.createElement("img"); 
-   img.src = item.img; 
-   img.alt = item.name; 
-   
-   const meta = document.createElement("div"); 
-   meta.className = "card__meta"; 
-   
-   const title = document.createElement("div"); 
-   title.className = "card__title"; 
-   title.textContent = item.name; 
-   
-   const tags = document.createElement("div"); 
-   tags.className = "card__tags"; 
-   tags.textContent = item.tags.join(" · "); 
-   
-   meta.appendChild(title); 
-   meta.appendChild(tags); 
-   
-   a.appendChild(img); 
-   a.appendChild(meta);
-   return a; 
-  } 
+function createCard(item){
+
+const card = document.createElement("div")
+card.className = "card"
+
+const img = document.createElement("img")
+img.src = item.img
+img.alt = item.name
+
+const overlay = document.createElement("div")
+overlay.className = "card__overlay"
+
+const title = document.createElement("div")
+title.className = "card__title"
+title.textContent = item.name
+
+const desc = document.createElement("div")
+desc.className = "card__desc"
+desc.textContent = item.desc
+
+const tags = document.createElement("div")
+tags.className = "card__tags"
+tags.textContent = item.tags.join(" · ")
+
+overlay.appendChild(title)
+overlay.appendChild(desc)
+overlay.appendChild(tags)
+
+card.appendChild(img)
+card.appendChild(overlay)
+
+card.addEventListener("click", () => openModal(item))
+
+return card
+
+}
   
   function createRow(row){ 
     const section = document.createElement("section"); 
@@ -137,6 +144,19 @@ function createCard(item){
         track.scrollBy({ left: amount, behavior: 'smooth' }); 
       }); 
     }); 
+
+    document.querySelectorAll(".row__track").forEach(track => { 
+      track.addEventListener("mousemove", (e)=>{
+      const rect = track.getBoundingClientRect()
+      const edge = 120
+      if(e.clientX < rect.left + edge){ 
+        track.scrollBy({ left:-10, behavior:"smooth"})
+      }
+      if(e.clientX > rect.right - edge){
+        track.scrollBy({ left:10, behavior:"smooth"})
+      }
+    })
+  })
     
     /* ========= Keyboard nav (optional) ========= */ 
     document.addEventListener('keydown', (e) => { 

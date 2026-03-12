@@ -68,12 +68,15 @@ body{
 .row__track{ display:flex; gap:10px; overflow-x:auto; scroll-behavior:smooth; padding: 0 64px; scrollbar-width:none; } 
 .row__track::-webkit-scrollbar{ display:none } 
 .card{ position:relative; flex: 0 0 auto; width: 220px; border-radius:10px; overflow:hidden; background:#1a1a1a; text-decoration:none; color:#fff; outline:1px solid rgba(255,255,255,.06); transition: transform .18s ease, outline-color .18s ease, box-shadow .18s ease; } 
-.card img{ display:block; width:100%; height:300px; object-fit:cover; transition: transform .25s ease } 
-.card:hover{ transform: translateY(-2px); outline-color: rgba(47,129,247,.6); box-shadow: 0 10px 28px rgba(0,0,0,.45) } 
-.card:hover img{ transform: scale(1.05) } 
+.card img{ display:block; width:100%; height:300px; object-fit:cover; transition: transform .4s ease } 
+.card:hover{ transform: scale(1.15); z-index:5; outline-color: rgba(47,129,247,.6); box-shadow: 0 20px 40px rgba(0,0,0,.6) }
+.card:hover img{ transform: scale(1.1) }
+.card__overlay{ position:absolute; bottom:0; left:0; right:0; padding:14px; background:linear-gradient(180deg, transparent, rgba(0,0,0,.9)); opacity:0; transition:opacity .25s ease } 
+.card:hover .card__overlay{ opacity:1 }
 .card__meta{ position:absolute; left:0; right:0; bottom:0; background: linear-gradient(180deg, transparent, rgba(0,0,0,.92)); padding:10px 10px 12px; font-size:13px; } 
-.card__title{ font-weight:800; margin:0 0 4px } 
-.card__tags{ color:#d0d0d0; font-size:12px } 
+.card__title{ font-weight:700; margin-bottom:4px }
+.card__desc{ font-size:12px; color:#ccc; margin-bottom:6px }
+.card__tags{ color:#d0d0d0; font-size:11px } 
 
 /* Row scroll buttons */ 
 .row__btn{ position:absolute; top:50%; transform: translateY(-50%); width:46px; height:66px; border:none; background: rgba(0,0,0,.55); color:#fff; font-size:22px; cursor:pointer; display:grid; place-items:center; border-radius:6px; opacity:0; transition: opacity .2s ease; } 
