@@ -7,7 +7,10 @@ Add or edit easily — thumbnails can be local
 const PROJECT_ROWS = [ 
   { title: "FinTech & RegTech", 
     id: "row1",
-     items: [ { name: "AML360 — Real-Time AML Dashboard", 
+     items: [ 
+      
+    {
+      name: "AML360 — Real-Time AML Dashboard", 
       img: "assets/images/fintech/aml360.png", 
       tags: ["Streamlit", "Grafana", "Prometheus", "Great Expectations"], 
       desc: "Real-time transaction risk scoring, case triage, SAR draft exports, metric SLOs.", 
@@ -15,7 +18,8 @@ const PROJECT_ROWS = [
       demo: "#"  
     },
 
-    { name: "Fraud Detection System", 
+    { 
+      name: "Fraud Detection System", 
       img: "assets\\images\\fintech\\fraud-detection system.png", 
       tags: ["Python", "FastAPI", "Postgres", "Stripe/Interac"], 
       desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.", 
@@ -23,7 +27,8 @@ const PROJECT_ROWS = [
       demo: "#" 
     },
 
-    { name: "Fraud Threshold Optimizer", 
+    { 
+      name: "Fraud Threshold Optimizer", 
       img: "assets\\images\\fintech\\threshold-optimizer.png", 
       tags: ["Python", "SQL", "Postgres", "Scikit-learn", "Optimization"], 
       desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.", 
@@ -31,7 +36,8 @@ const PROJECT_ROWS = [
       demo: "#" 
     },
     
-    { name: "Fraud Analytics Dashboard", 
+    { 
+      name: "Fraud Analytics Dashboard", 
       img: "assets\\images\\fintech\\fraud-analytics.png", 
       tags: ["Jupyter Notebook", "Python", "Postgres", "Seaborn", "Matplotlib"], 
       desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.", 
@@ -39,7 +45,8 @@ const PROJECT_ROWS = [
       demo: "#" 
     },
     
-    { name: "Fraud Risk Strategy", 
+    { 
+      name: "Fraud Risk Strategy", 
       img: "assets\\images\\fintech\\fraud-strategy.png", 
       tags: ["Jupyter Notebook", "Pandas", "Scikit-learn", "Risk Modeling"], 
       desc: "Unified payouts with KYC/AML checks, webhook handling, audit logs.", 
@@ -47,56 +54,14 @@ const PROJECT_ROWS = [
       demo: "#" 
     } 
   ] 
-}, 
-
-{ title: "Data Analytics & Forecasting", id: "row2", 
-  items: [ { name: "BizLens — KPI & Forecasting Platform", 
-    img: "https://picsum.photos/600/900?random=21", 
-    tags: ["Python", "SQL", "Power BI", "ARIMA/Prophet"], 
-    desc: "Star schema, ETL, forecasting, cohort LTV, DAX dashboards.", 
-    code: "https://github.com/Harvir-Singh", 
-    demo: "#" 
-  },
-  
-  { name: "Portfolio Tracker — Single User", 
-    img: "https://picsum.photos/600/900?random=22", 
-    tags: ["Postgres", "Python", "yfinance", "Streamlit"], 
-    desc: "Daily P&L, performance metrics, asset allocation, risk exposure.", 
-    code: "https://github.com/Harvir-Singh", 
-    demo: "#" 
-  } 
-] 
-}, 
-
-{ title: "Markets & Automation", id: "row3", 
-  items: [ { name: "AutoTrader Live — Manual Execution", 
-    img: "https://picsum.photos/600/900?random=11", 
-    tags: ["Finnhub", "TimescaleDB", "Alerts"], 
-    desc: "Real-time market data, alerts, manual order workflow, risk controls.", 
-    code: "https://github.com/Harvir-Singh", 
-    demo: "#" 
-  } 
-] 
-}, 
-
-{ title: "Product & Ops", id: "row4", 
-  items: [ { name: "Product IQ — PM Toolkit", 
-    img: "https://picsum.photos/600/900?random=41", 
-    tags: ["Jira", "Confluence", "OKRs", "A/B"], 
-    desc: "Templates for PRDs, OKRs, discovery, roadmap, analytics experiments.", 
-    code: "https://github.com/Harvir-Singh", 
-    demo: "#" 
-  } 
-] 
-} 
+},  
 ]; 
 
 /* ========= 
 Render rows & cards 
 ========= */ 
 
-const rowsRoot = 
-document.getElementById("projects"); 
+const rowsRoot = document.getElementById("projects"); 
 
 function createCard(item){ 
   const a = document.createElement("a");
@@ -124,8 +89,8 @@ function createCard(item){
    meta.appendChild(tags); 
    
    a.appendChild(img); 
-   a.appendChild(meta); return 
-   a; 
+   a.appendChild(meta);
+   return a; 
   } 
   
   function createRow(row){ 
@@ -199,9 +164,10 @@ function createCard(item){
     function openModal(item){ 
       modalTitle.textContent = item.name; 
       modalDesc.textContent = item.desc || ""; 
-      modalMeta.textContent = (item.tags && 
-        item.tags.length) ? Tech: $item.tags.join(" · ")}
-      ""; 
+      modalMeta.textContent = 
+        (item.tags && item.tags.length)
+         ? 'Tech: ${item.tags.join(" · ")}'
+         :""; 
       modalDemo.href = item.demo || "#"; 
       modalCode.href = item.code || "#"; 
       modal.setAttribute('aria-hidden', 'false'); 
@@ -210,3 +176,4 @@ function createCard(item){
         if (e.target.matches('[data-close]')) 
           modal.setAttribute('aria-hidden', 'true'); 
         });
+    }
