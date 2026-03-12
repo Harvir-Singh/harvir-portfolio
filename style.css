@@ -52,19 +52,24 @@ body{
 
 .hero{
   position:relative;
-  min-height:70vh;
-  margin:20px;
-  border-radius:20px;
 
-  display:flex;
-  align-items:center;
+  margin:20px;
+  padding:120px 80px;
+
+  border-radius:20px;
 
   background:linear-gradient(
     135deg,
-    #ff8c5a,
-    #ff5f6d,
-    #7b61ff
+    #ff8c5a 0%,
+    #ff5f6d 40%,
+    #e65b7c 60%,
+    #f2b38c 100%
   );
+
+  min-height:520px;
+
+  display:flex;
+  align-items:center;
 
   overflow:hidden;
 }
@@ -73,17 +78,12 @@ body{
 .hero{ background-image: var(--bg) } /* prevents CLS */
 .hero{ background-image: var(--bg) }
 
-.hero{ background-image: var(--bg) } /* final assignment via inline css var */
-
-.hero__overlay{
-  display:none;
-}
 
 .hero__content{
   position:relative; padding:8vw 4vw; max-width:900px;
 }
-.hero__title{ font-size:72px; font-weight:600 }
-.hero__subtitle{ margin:0 0 6px; color:#e8eef6; font-weight:700; font: size 22px }
+.hero__title{ font-size:72px; font-weight:600, color:white }
+.hero__subtitle{ margin:0 0 6px; color:white; font-weight:700; font: size 22px }
 .hero__tagline{ color:#cdd6df; max-width:60ch; margin:0 0 16px; font-size:18px }
 .hero__actions{ display:flex; gap:12px }
 .btn--primary{ background:#fff; color:#111 }
