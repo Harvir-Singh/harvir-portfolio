@@ -143,15 +143,15 @@ document.querySelectorAll('.row__btn').forEach(btn => {
   const id = btn.getAttribute('data-target');
   const track = document.getElementById(id);
   if (!tracksState[id]) tracksState[id] = 0;
-  
+
   btn.addEventListener('click', () => {
     // Scroll amount is roughly the viewport width
-    const amount = window.innerWidth * 0.8; 
-    
+    const amount = window.innerWidth * 0.8;
+
     // Calculate maximum distance we can translate left
     // track.scrollWidth is total width. We subtract innerWidth and add padding to find the end.
     const maxScroll = Math.max(0, track.scrollWidth - window.innerWidth + 64);
-    
+
     if (btn.classList.contains('row__btn--right')) {
       tracksState[id] -= amount;
       if (Math.abs(tracksState[id]) > maxScroll) tracksState[id] = -maxScroll;
@@ -159,7 +159,7 @@ document.querySelectorAll('.row__btn').forEach(btn => {
       tracksState[id] += amount;
       if (tracksState[id] > 0) tracksState[id] = 0;
     }
-    
+
     track.style.transform = `translateX(${tracksState[id]}px)`;
   });
 });
@@ -169,7 +169,7 @@ document.querySelectorAll('.row__btn').forEach(btn => {
 document.addEventListener('keydown', (e) => {
   const focusedRow = document.querySelector('.row:hover') || document.querySelector('.row');
   if (!focusedRow) return;
-  
+
   if (e.key === 'ArrowRight') {
     const btn = focusedRow.querySelector('.row__btn--right');
     if (btn) btn.click();
