@@ -136,42 +136,48 @@ function createRow(row) {
 
 PROJECT_ROWS.forEach(r => rowsRoot.appendChild(createRow(r)));
 
-/* ========= Row scroll buttons ========= */
+/* ========= Row scroll buttons (JS Transform based) ========= */
+const tracksState = {};
+
 document.querySelectorAll('.row__btn').forEach(btn => {
   const id = btn.getAttribute('data-target');
   const track = document.getElementById(id);
+  if (!tracksState[id]) tracksState[id] = 0;
+  
   btn.addEventListener('click', () => {
-    const amount = track.clientWidth * 0.9 * (btn.classList.contains('row__btn--right') ? 1 : -1);
-    track.scrollBy({ left: amount, behavior: 'smooth' });
+    // Scroll amount is roughly the viewport width
+    const amount = window.innerWidth * 0.8; 
+    
+    // Calculate maximum distance we can translate left
+    // track.scrollWidth is total width. We subtract innerWidth and add padding to find the end.
+    const maxScroll = Math.max(0, track.scrollWidth - window.innerWidth + 64);
+    
+    if (btn.classList.contains('row__btn--right')) {
+      tracksState[id] -= amount;
+      if (Math.abs(tracksState[id]) > maxScroll) tracksState[id] = -maxScroll;
+    } else {
+      tracksState[id] += amount;
+      if (tracksState[id] > 0) tracksState[id] = 0;
+    }
+    
+    track.style.transform = `translateX(${tracksState[id]}px)`;
   });
 });
 
-document.querySelectorAll(".row__track").forEach(track => {
-  track.addEventListener("mousemove", (e) => {
-    const rect = track.getBoundingClientRect()
-    const edge = 120
-    if (e.clientX < rect.left + edge) {
-      track.scrollBy({ left: -10, behavior: "smooth" })
-    }
-    if (e.clientX > rect.right - edge) {
-      track.scrollBy({ left: 10, behavior: "smooth" })
-    }
-  })
-})
 
 /* ========= Keyboard nav (optional) ========= */
 document.addEventListener('keydown', (e) => {
-  const focusedTrack =
-    document.querySelector('.row:hover .row__track') ||
-    document.querySelector('.row .row__track');
-  if (!focusedTrack) return;
-  if (e.key === 'ArrowRight') focusedTrack.scrollBy({
-    left: focusedTrack.clientWidth * 0.9, behavior: 'smooth'
-  });
-  if (e.key === 'ArrowLeft')
-    focusedTrack.scrollBy({
-      left: -focusedTrack.clientWidth * 0.9, behavior: 'smooth'
-    });
+  const focusedRow = document.querySelector('.row:hover') || document.querySelector('.row');
+  if (!focusedRow) return;
+  
+  if (e.key === 'ArrowRight') {
+    const btn = focusedRow.querySelector('.row__btn--right');
+    if (btn) btn.click();
+  }
+  if (e.key === 'ArrowLeft') {
+    const btn = focusedRow.querySelector('.row__btn--left');
+    if (btn) btn.click();
+  }
 });
 
 

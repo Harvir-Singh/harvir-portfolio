@@ -15,6 +15,7 @@ body{
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif; 
   background: var(--bg); 
   color: var(--text); 
+  overflow-x: hidden;
 } 
 
 /* ===== Nav ===== */ 
@@ -67,8 +68,7 @@ body{
 .row{ position:relative; padding: 16px 0 24px; z-index: 1; } 
 .row:hover { z-index: 10; }
 .row__title{ margin: 8px 64px 10px; font-size: 20px; color:#e8eef6 } 
-.row__track{ display:flex; gap:10px; overflow-x:auto; scroll-behavior:smooth; padding: 40px 64px; margin: -30px 0; scrollbar-width:none; } 
-.row__track::-webkit-scrollbar{ display:none } 
+.row__track{ display:flex; gap:10px; padding: 0 64px; width: max-content; transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .card{ position:relative; flex: 0 0 auto; width: 220px; border-radius:10px; overflow:hidden; background:#1a1a1a; text-decoration:none; color:#fff; outline:1px solid rgba(255,255,255,.06); transition: transform .18s ease, outline-color .18s ease, box-shadow .18s ease; } 
 .card img{ display:block; width:100%; height:300px; object-fit:cover; transition: transform .4s ease } 
 .card:hover{ transform: scale(1.15); z-index:5; outline-color: rgba(47,129,247,.6); box-shadow: 0 20px 40px rgba(0,0,0,.6) }
