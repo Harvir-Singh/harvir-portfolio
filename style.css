@@ -92,6 +92,7 @@ body{
 .xp__meta{ color:#9ab; margin:.2rem 0 1rem; font-size:14px } 
 
 /* ===== Contact ===== */ 
+.contact { text-align: center; padding: 60px 24px; }
 .contact-icons { display: flex; gap: 25px; justify-content: center; align-items: center; margin-top: 20px; } 
 .contact-icons img { width: 36px; height: 36px; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0.85; } 
 .contact-icons img:hover { transform: scale(1.2); opacity: 1; } 
